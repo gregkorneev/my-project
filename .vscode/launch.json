@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug RPN Calculator (gdb)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/rpn_calculator/build/rpn_calculator",
+      "cwd": "${workspaceFolder}/rpn_calculator",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "externalConsole": false
+    },
+    {
+      "name": "Debug rpn_tests (gdb)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/rpn_calculator/build/tests/rpn_tests",
+      "cwd": "${workspaceFolder}/rpn_calculator",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "externalConsole": false
+    }
+  ]
+}
