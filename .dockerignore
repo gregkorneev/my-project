@@ -1,0 +1,9 @@
+.git
+rpn_calculator/build/
+rpn_calculator/docs/
+rpn_calculator/latex/
+rpn_calculator/html/
+**/*.o
+**/*.a
+**/*.so
+**/*.log
