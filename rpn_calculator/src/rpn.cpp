@@ -5,6 +5,7 @@
 #include <string>
 #include <cctype>
 #include <cmath>
+#include <stack>   // <— добавлено
 
 // Вспомогательная функция для разбиения строки на токены
 std::vector<std::string> tokenize(const std::string& expression) {
@@ -35,7 +36,7 @@ bool is_number(const std::string& s) {
         if (s[i] == '.') {
             if (has_dot) return false; // Две точки в числе
             has_dot = true;
-        } else if (!std::isdigit(s[i])) {
+        } else if (!std::isdigit(static_cast<unsigned char>(s[i]))) {
             return false;
         }
     }
@@ -71,7 +72,7 @@ double evaluate_rpn(const std::string& expression) {
                     throw std::invalid_argument("Division by zero");
                 }
                 result = a / b;
-            } else if (token == "^") {
+            } else if (token == "^") {             // ← возведение в степень
                 result = std::pow(a, b);
             } else {
                 throw std::invalid_argument("Invalid operator: '" + token + "'");
