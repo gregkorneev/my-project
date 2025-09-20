@@ -16,7 +16,6 @@ std::vector<std::string> tokenize(const std::string& expression) {
     while (iss >> token) {
         tokens.push_back(token);
     }
-rpn.h
     return tokens;
 }
 
